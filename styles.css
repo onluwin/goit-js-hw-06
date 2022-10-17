@@ -1,0 +1,31 @@
+.home-link {
+  display: block;
+  margin-bottom: 50px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.gallery {
+  display: inline-flex;
+  list-style-type: none;
+  outline: 1px solid black;
+  padding: 20px;
+}
+.gallery__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}

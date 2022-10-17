@@ -58,8 +58,9 @@
 // const listRef = document.querySelector('.gallery')
 
 // const markup =
-//   images.map(item => `<li><img alt="${item.alt}" width=200 src="${item.url}"></li>`
-//   )
+//   images
+//     .map(item => `<li class="gallery__item"><img class="gallery__img" alt="${item.alt}" width=200 src="${item.url}"></li>`)
+//     .join('');
 
 // listRef.insertAdjacentHTML("afterbegin", markup)
 
@@ -92,16 +93,20 @@
 
 
 
-const refs = {
-  input: document.querySelector('#name-input'),
-  output: document.querySelector('#name-output'),
-}
-refs.input.addEventListener('input', onInputChange)
-function onInputChange(event) { 
-  const value = event.currentTarget.value.trim();
-  if (value === '') {
-    refs.output.textContent === 'Anonymous';
-  } else {
-    refs.output.textContent = value
-  }
-}
+// const refs = {
+//   input: document.querySelector('#name-input'),
+//   output: document.querySelector('#name-output'),
+// }
+// refs.input.addEventListener('input', onInputChange)
+// function onInputChange(event) {
+//   const value = refs.input.value.trim();
+//   const text = value ? value : 'Anonymous';
+//   refs.output.textContent = text;
+//   }
+
+
+
+// TASK 6 //
+
+
+
