@@ -14,7 +14,7 @@ function getRandomHexColor() {
 }
 
 const onInputNumber = (event) => {
-    boxesAmount = event.currentTarget.value
+    boxesAmount = Number(event.currentTarget.value)
 }
 
 const addMarkupToDocument = (string) => {
@@ -27,11 +27,10 @@ const createBoxes = (boxesAmount) => {
     for (let i = 0; i < boxesAmount; i += 1) {
         const color = getRandomHexColor();
         boxSize += 10
-        markup += `<div style="background-color: ${color}; width: ${boxSize}px; height: ${boxSize}px"></div>`;
+        markup += `<div style="background-color: ${color}; width: ${boxSize}px; height: ${boxSize}px">fff</div>`;
     }
     addMarkupToDocument(markup)
 }
-
 refs.inputBoxesAmount.addEventListener('input', onInputNumber)
 refs.createBoxesBtn.addEventListener('click', createBoxes)
 refs.destroyBoxesBtn.addEventListener('click', () => {refs.outputBoxes.innerHTML = ''})
