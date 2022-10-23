@@ -5,7 +5,7 @@ const refs = {
     destroyBoxesBtn: controls.querySelector('[data-destroy]'),
     outputBoxes: document.querySelector('#boxes'),
 }
-let boxesAmount = 0
+let boxesAmount = 0;
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215)
@@ -14,7 +14,8 @@ function getRandomHexColor() {
 }
 
 const onInputNumber = (event) => {
-    boxesAmount = Number(event.currentTarget.value)
+    boxesAmount = Number(event.currentTarget.value);
+    console.log(boxesAmount);
 }
 
 const addMarkupToDocument = (string) => {
@@ -22,15 +23,24 @@ const addMarkupToDocument = (string) => {
 }
 
 const createBoxes = (boxesAmount) => {
+    console.log(boxesAmount);
     let boxSize = 30
     let markup = ''
-    for (let i = 0; i < boxesAmount; i += 1) {
+    for (let i = 0; i < Number(refs.inputBoxesAmount.value); i += 1) {
         const color = getRandomHexColor();
         boxSize += 10
         markup += `<div style="background-color: ${color}; width: ${boxSize}px; height: ${boxSize}px">fff</div>`;
     }
     addMarkupToDocument(markup)
 }
+
 refs.inputBoxesAmount.addEventListener('input', onInputNumber)
 refs.createBoxesBtn.addEventListener('click', createBoxes)
-refs.destroyBoxesBtn.addEventListener('click', () => {refs.outputBoxes.innerHTML = ''})
+refs.destroyBoxesBtn.addEventListener('click', () => { refs.outputBoxes.innerHTML = '' })
+
+const a = 19
+
+const b = (letter) => {
+    console.log(letter);
+}
+b(a)
